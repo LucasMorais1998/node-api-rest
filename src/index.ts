@@ -1,9 +1,10 @@
 import dotenv from "dotenv";
 import express from "express";
+import { router as routes } from "./routes/index";
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 const port = process.env.APP_PORT;
 
 app.use(
@@ -13,6 +14,8 @@ app.use(
 );
 
 app.use(express.json());
+
+app.use(routes);
 
 app.listen(port, () => {
   console.log(`http://localhost:${process.env.APP_PORT}/`);
