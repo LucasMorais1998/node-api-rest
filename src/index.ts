@@ -5,7 +5,7 @@ import { router as routes } from "./routes/index";
 dotenv.config();
 
 export const app = express();
-const port = process.env.APP_PORT;
+const port = process.env.PORT;
 
 app.use(
   express.urlencoded({
@@ -18,5 +18,5 @@ app.use(express.json());
 app.use(routes);
 
 app.listen(port, () => {
-  console.log(`http://localhost:${process.env.APP_PORT}/`);
+  console.log(`http://localhost:${process.env.PORT}`);
 });
