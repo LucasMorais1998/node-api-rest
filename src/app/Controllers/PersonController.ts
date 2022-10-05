@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 
 class PersonController {
-  public async index(req: Request, res: Response) {
-    res.json({ message: "Ok" });
+  public async index(request: Request, response: Response) {
+    response.send({ message: "Ok" });
   }
 }
 
