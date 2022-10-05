@@ -4,4 +4,4 @@ import PersonController from "../app/Controllers/PersonController";
 
 export const router = Router();
 
-router.get("/", PersonController.index);
+router.get("/person", PersonController.index);
